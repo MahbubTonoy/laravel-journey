@@ -18,3 +18,9 @@ class Math
   return $first / $second;
  }
 }
+
+class HigherMath extends Math {
+ public function complex($first, $second) {
+  return $this->add($first, $second) + $this->sub($first, $second);
+ }
+}
