@@ -221,7 +221,7 @@ staticFunction();
  * class is a template of an object and object is an instance of class.
  */
 ?>
-<br/>
+<br />
 
 
 <?php
@@ -238,39 +238,91 @@ echo str_word_count($str);
  * strrev() :- this function take string argument and return it as reverse.
  */
 
- echo "<br/>";
+echo "<br/>";
 
- echo strrev(">.<");
+echo strrev(">.<");
+
+/**
+ * strpos() :- this function return two string as arguments, and try to search second string arguments from first one. if found then return the first character position of matched keywords 
+ */
+$myName = "Mahbub Rashid Tonoy";
+echo "<br/>";
+echo strpos($myName, "Tonoy"); //return 14
+
+/**
+ * str_replace() :- this function take three arguments, first one is query, second one is replace string, and last one is the final string where we can perform a search and replace operation.
+ */
+$place = "I live in Dhaka";
+$replace = str_replace("Dhaka", "Chittagong", $place);
+
+echo "<br/>";
+echo $replace; // this will print `I live in Chittagong`.
+
+
+echo "<br/>";
+echo crypt('Mahbub Rashid Tonoy', 'st');
+
+echo "<br/>";
+$file = "test.txt";
+md5_file($file);
+// file_put_contents(md5_file($file),$file);
+echo "<br/>";
+
+echo PHP_INT_MAX;
+echo "<br/>";
+echo PHP_INT_MIN;
+echo "<br/>";
+echo PHP_INT_SIZE;
+echo "<br/>";
+
+/**
+ * PI constant function : pi();
+ */
+
+echo "<br/>";
+echo pi(); // this will return the value of pi as a constant floating number.
+
+echo "<br/>";
+echo min(1, 4, 5, -4, 6, -99); //return min number form given arguments
+echo "<br/>";
+echo max(1, 4, 5, -4, 6, -99); //return max number from given arguments
+
+echo "<br/>";
+echo abs(-3.4); //return absolute (Positive number);
+
+echo "<br/>";
+echo sqrt(9); //return squre root of a number
+
+echo "<br/>";
+echo round(9.4); //return squre root of a number
+
+echo "<br/>";
+echo rand(); // this will return any random number
+
+echo "<br/>";
+echo rand(10, 100); // rand have two optional arguments, first one is min and second one is max. after giving these arguments we can specify the range of random number
+
+/**
+ * constant variables:
+ * constant is a type of variables that contains non-reassignable or constant value. it can't be changed during the script.
+ * to assign a constant, we need to use `define()` function with two arguments,  first one is constant name, and another one is constant value;
+ */
+define("constantVariable", "I Love My Country");
+echo "<br/>";
+echo constantVariable;
+
+// note that, we don't need to add $ sign before any constant variables;
+/**
+ * please note that we can third argument while declare a constant which takes boolean only. ant that define case-sensitivity. if we pass value true, the constant variable name will case-sensitive. otherwise this will case-insesitive. default is false.
+ */
 
  /**
-  * strpos() :- this function return two string as arguments, and try to search second string arguments from first one. if found then return the first character position of matched keywords 
+  * we can add any type of datatypes into a constant variable, like string, integer, float, object, array, boolean, or resource.
+  *
   */
-  $myName = "Mahbub Rashid Tonoy";
-  echo "<br/>";
-  echo strpos($myName, "Tonoy"); //return 14
+
+  define("arrayVariable", ['React', 'Vue', 'Angular']);
 
   /**
-   * str_replace() :- this function take three arguments, first one is query, second one is replace string, and last one is the final string where we can perform a search and replace operation.
+   * variables has global scope. it can be use from anywhere.
    */
-  $place = "I live in Dhaka";
-  $replace = str_replace("Dhaka", "Chittagong", $place);
-
-  echo "<br/>";
-  echo $replace; // this will print `I live in Chittagong`.
-
-
- echo "<br/>";
- echo crypt('Mahbub Rashid Tonoy','st');
-
- echo "<br/>";
- $file = "test.txt";
- md5_file($file);
- // file_put_contents(md5_file($file),$file);
- echo "<br/>";
-
- echo PHP_INT_MAX;
- echo "<br/>";
- echo PHP_INT_MIN;
- echo "<br/>";
- echo PHP_INT_SIZE;
- echo "<br/>";
