@@ -6,6 +6,7 @@ let Element = ()=>{
   <div>
    <h1>{n}</h1>
    <button onClick={()=>incrementor(++n)}>Increment</button>
+   <button onClick={()=>incrementor(0)}>Reset</button>
   </div>
  )
 }
