@@ -1,5 +1,2 @@
 <?php
-
-function add($x, $y) {
-  return $x+$y;
-}
+echo "This is math page";
