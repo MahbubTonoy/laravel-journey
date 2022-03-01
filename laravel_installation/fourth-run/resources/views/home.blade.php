@@ -11,5 +11,8 @@
     <h1>This is Home Page</h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis nobis ad officia quasi ipsam, alias sapiente nihil corrupti consectetur obcaecati?</p>
   </div>
+  <p>
+    <a href="{{route('AboutPage')}}" >About</a>
+  </p>
 </body>
 </html>

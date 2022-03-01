@@ -7,6 +7,9 @@
   <title>About</title>
 </head>
 <body>
+  <p>
+    <a href="{{route('HomePage')}}">Home</a>
+  </p>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nisi dolorem consequuntur eligendi mollitia iste dolor, recusandae quas vel harum repellendus. Natus eveniet in vero ea! Reiciendis asperiores pariatur delectus.
   Molestiae, quae excepturi inventore id est possimus, minus laudantium quia et placeat consectetur. Delectus quisquam dicta quo mollitia sint dolorem deleniti, nobis consequuntur, laboriosam natus quaerat a beatae voluptatem architecto.
   Praesentium iste tempore esse, ea aspernatur animi veritatis cupiditate totam qui amet cumque laudantium voluptas distinctio sequi. Quod soluta nesciunt voluptatibus cupiditate possimus minus, quam natus inventore similique, qui aperiam.

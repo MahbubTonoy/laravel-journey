@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', "App\Http\Controllers\RouteController@Home")->name("HomePage");
-Route::get('/about', "App\Http\Controllers\RouteController@About")->name("AboutPage");
+Route::get("/", [SiteController::class, 'Home'])->name('home');
+Route::get("/about", [SiteController::class, 'About'])->name('about');
+Route::get("/contact", [SiteController::class, 'Contact'])->name('contact');
+
+Route::get('/name/{myName}', [SiteController::class, 'Name']);
+Route::get("/fullName/{firstName}/{middleName}/{lastName}", [SiteController::class, 'fullName']);
