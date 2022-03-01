@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-// use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
     function Home() {
-        return "I'm from siteController Home Method";
+        return view("Home");
     }
      
     function About() {
-        return "I'm from siteController About Method";
+        return view("About");
     }
 
     function Contact() {
-        return "I'm from siteController Contact Method";
+        return view("Contact");
     }
 }

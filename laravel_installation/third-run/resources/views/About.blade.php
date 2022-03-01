@@ -7,6 +7,6 @@
   <title>About</title>
 </head>
 <body>
-  <h1>About World</h1>
+  <h1>About Contact</h1>
 </body>
 </html>
