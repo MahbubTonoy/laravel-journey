@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +13,6 @@ use App\Http\Controllers\AccountController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::group(['prefix'=>'account'], function() {
-    Route::get("/", [AccountController::class, "user"]);
-    Route::get("/login", [AccountController::class, "login"]);
-    Route::get("/logout", [AccountController::class, "logout"]);
-    Route::get("/signup", [AccountController::class, "signup"]);
+Route::get('/', function () {
+    return view('welcome');
 });
