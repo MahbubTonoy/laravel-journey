@@ -24,3 +24,6 @@ Route::group(['prefix'=>'account'], function() {
     Route::get("/logout", [AccountController::class, "logout"]);
     Route::get("/signup", [AccountController::class, "signup"]);
 });
+// Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
