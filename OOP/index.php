@@ -1,10 +1,42 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
+interface Pay {
+  public function payment();
+}
 
-require "classLoader.php";
+class Paypal implements Pay{
+  public function payment() {
 
-const constantNumber = 300;
+  }
+  public function __construct() {
+    echo "Payment By Paypal";
+  }
+}
 
-// $random = new Test(12);
+class Visa implements Pay{
+  public function payment() {
+    
+  }
+  public function __construct() {
+    echo "Payment By Visa";
+  }
+}
 
-echo constantNumber;
+class Cash implements Pay{
+  public function payment() {
+    
+  }
+  public function __construct() {
+    echo "Payment By Cash";
+  }
+}
+
+class Buy {
+  public function __construct(Pay $test)
+  {
+    
+  }
+}
+
+$cash = new Cash();
+$pay = new Buy($cash);
