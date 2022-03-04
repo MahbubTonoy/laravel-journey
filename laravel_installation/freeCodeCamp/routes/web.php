@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Handler;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('a');
+
+
+// Route::get("/tonoy", [
+//     "uses"=> "App\Http\Controllers\Handler@Test",
+//     "as"=> "test"
+// ]);
+
+
+Route::get('/tonoy',[Handler::class,'test'])->name('test');
