@@ -26,3 +26,7 @@ Route::get('/', function () {
 
 
 Route::get('/tonoy',[Handler::class,'test'])->name('test');
+
+Route::get("/directory", [Handler::class, 'dir']);
+
+Route::get('/users/{userID}', [Handler::class, 'users'])->name("user");
