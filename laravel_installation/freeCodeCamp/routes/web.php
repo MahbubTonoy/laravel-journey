@@ -1,7 +1,7 @@
 <?php
-
-use App\Http\Controllers\Handler;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RouteController;
+use Symfony\Component\Routing\RouteCompiler;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('a');
-
-
-// Route::get("/tonoy", [
-//     "uses"=> "App\Http\Controllers\Handler@Test",
-//     "as"=> "test"
-// ]);
-
-
-Route::get('/tonoy',[Handler::class,'test'])->name('test');
-
-Route::get("/directory", [Handler::class, 'dir']);
-
-Route::get('/users/{userID}', [Handler::class, 'users'])->name("user");
+Route::get("/", [RouteController::class, "home"])->name("home");
+Route::get("/about", [RouteController::class, "about"])->name("about");
