@@ -14,5 +14,6 @@ use Symfony\Component\Routing\RouteCompiler;
 |
 */
 
-Route::get("/", [RouteController::class, "home"])->name("home");
-Route::get("/about", [RouteController::class, "about"])->name("about");
+Route::get("/", [RouteController::class, "home"])->name("homePage");
+Route::get("/about", [RouteController::class, "about"])->name("aboutPage");
+Route::get("/contact", [RouteController::class, "contact"])->name("contactPage");
