@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
 use Symfony\Component\Routing\RouteCompiler;
@@ -17,3 +18,6 @@ use Symfony\Component\Routing\RouteCompiler;
 Route::get("/", [RouteController::class, "home"])->name("homePage");
 Route::get("/about", [RouteController::class, "about"])->name("aboutPage");
 Route::get("/contact", [RouteController::class, "contact"])->name("contactPage");
+Route::get("/if", function () {
+  return view("if");
+});
