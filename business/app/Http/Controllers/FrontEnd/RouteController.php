@@ -16,8 +16,8 @@ class RouteController extends Controller
     function services() {
         return view("frontEnd.services");
     }
-    function project() {
-        return view("frontEnd.project");
+    function projects() {
+        return view("frontEnd.projects");
     }
     function blog() {
         return view("frontEnd.blog");

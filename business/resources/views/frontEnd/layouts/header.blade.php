@@ -28,19 +28,19 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="{{URL::to("/")}}" class="logo">
               <img src="{{ asset("assets") }}/images/logo-v3.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="{{URL::to("/")}}" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="{{URL::to("/about")}}">About</a></li>
-              <li class="scroll-to-section"><a href="{{URL::to("/services")}}">Services</a></li>
-              <li class="scroll-to-section"><a href="{{URL::to("/portfolio")}}">Projects</a></li>
-              <li class="scroll-to-section"><a href="{{URL::to("/blog")}}">Blog</a></li>
-              <li class="scroll-to-section"><a href="{{URL::to("/contact")}}">Contact</a></li> 
-              <li class="scroll-to-section"><div class="border-first-button"><a href="#contact">Free Quote</a></div></li> 
+              <li class="scroll-to-section"><a href="{{URL::to("/")}}" class="{{ request()->is('/') ? 'active':''}}">Home</a></li>
+              <li class="scroll-to-section"><a href="{{URL::to("/about")}}" class="{{ request()->is('about') ? 'active':''}}">About</a></li>
+              {{-- <li class="scroll-to-section"><a href="{{URL::to("/services")}}" class="{{ request()->is('services') ? 'active':''}}">Services</a></li> --}}
+              <li class="scroll-to-section"><a href="{{URL::to("/projects")}}" class="{{ request()->is('projects') ? 'active':''}}">Projects</a></li>
+              <li class="scroll-to-section"><a href="{{URL::to("/blog")}}" class="{{ request()->is('blog') ? 'active':''}}">Blog</a></li>
+              <li class="scroll-to-section"><a href="{{URL::to("/contact")}}" class="{{ request()->is('contact') ? 'active':''}}">Contact</a></li> 
+              <li class="scroll-to-section"><div class="border-first-button"><a href="{{URL::to("/contact")}}" class="{{ request()->is('contact') ? 'active':''}}">Free Quote</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>

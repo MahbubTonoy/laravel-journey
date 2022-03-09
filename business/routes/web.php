@@ -17,6 +17,6 @@ use App\Http\Controllers\FrontEnd\RouteController as frontRoute;
 Route::get("/", [frontRoute::class, 'home']);
 Route::get("/about", [frontRoute::class, 'about']);
 Route::get("/services", [frontRoute::class, 'services']);
-Route::get("/project", [frontRoute::class, 'project']);
+Route::get("/projects", [frontRoute::class, 'projects']);
 Route::get("/blog", [frontRoute::class, 'blog']);
 Route::get("/contact", [frontRoute::class, 'contact']);
