@@ -7,10 +7,16 @@ let wp = {
     filename: 'app.bundle.js'
   },
   mode: 'production',
-  module: {
+  modules: {
     rules: [
       {
-        
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            preset: ['@babel/presets-env']
+          }
+        }
       }
     ]
   }
