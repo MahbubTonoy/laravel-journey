@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class RouteController extends Controller
 {
-    //
+    function index() {
+        return view("backEnd.index");
+    }
 }

@@ -18,3 +18,8 @@ mix.js('resources/frontEnd/app.js', 'public/frontEnd/js')
         //
     ])
     .copy('resources/frontEnd/assets/images/', 'public/frontEnd/images/');
+
+//back end resources
+mix.js('resources/backEnd/app.js', 'public/backEnd/js')
+    .sass('resources/backEnd/app.scss', 'public/backEnd/css')
+    .copy('node_modules/admin-lte/dist/img/', 'public/dist/img');

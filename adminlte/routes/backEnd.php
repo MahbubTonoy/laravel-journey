@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BackEnd\RouteController as backRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,3 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::group(["prefix"=>"admin"], function() {
+  Route::get("/", [backRoute::class, 'index']);
+});

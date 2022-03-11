@@ -1,0 +1,11 @@
+require("admin-lte/plugins/jquery/jquery.min.js");
+require("admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js");
+require("admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js");
+require("admin-lte/dist/js/adminlte.js");
+require("admin-lte/plugins/jquery-mousewheel/jquery.mousewheel.js");
+// require("raphael/raphael.min.js");
+// require("jquery-mapael/js/jquery.mapael");
+require("jquery-mapael/js/maps/usa_states.min.js");
+require("admin-lte/plugins/chart.js/Chart.min.js");
+require("admin-lte/dist/js/demo.js");
+require("admin-lte/dist/js/pages/dashboard2.js");

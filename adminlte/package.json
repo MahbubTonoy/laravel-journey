@@ -29,6 +29,7 @@
   "author": "Mahbub Tonoy",
   "license": "MIT",
   "dependencies": {
-    "admin-lte": "^3.2.0"
+    "admin-lte": "^3.2.0",
+    "raphael": "^2.3.0"
   }
 }
