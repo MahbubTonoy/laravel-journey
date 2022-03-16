@@ -11,6 +11,10 @@ class changePwd extends Controller
         return view("auth.passwords.change");
     }
     public function updatePwd(Request $request) {
-        dd($request);
+        $request->validate([
+            'oldPwd' => 'required',
+            'newPwd' => 'required|confirmed'
+        ]);
+        dd($request->all());
     }
 }

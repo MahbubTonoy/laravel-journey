@@ -14,14 +14,15 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('changePwd') }}">
+                    <form method="POST" action="{{ route('updatePwd') }}">
+                        @csrf
                         <div class="row mb-3">
                             <label for="password-old" class="col-md-4 col-form-label text-md-end">Old Password</label>
 
                             <div class="col-md-6">
-                                <input id="password-old" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autofocus>
+                                <input id="password-old" type="password" class="form-control @error('password') is-invalid @enderror" name="oldPwd" value="{{ old('password') }}" required autofocus>
 
-                                @error('password')
+                                @error('oldPwd')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -33,9 +34,9 @@
                             <label for="password-new-1" class="col-md-4 col-form-label text-md-end">New Password</label>
 
                             <div class="col-md-6">
-                                <input id="password-new-1" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password-new-1" type="password" class="form-control @error('password') is-invalid @enderror" name="newPwd" required autocomplete="current-password">
 
-                                @error('password')
+                                @error('newPwd')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -46,9 +47,9 @@
                             <label for="password-new-2" class="col-md-4 col-form-label text-md-end">Confirm New Password</label>
 
                             <div class="col-md-6">
-                                <input id="password-new-2" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password-new-2" type="password" class="form-control @error('password') is-invalid @enderror" name="newPwd_confirmation" required autocomplete="current-password">
 
-                                @error('password')
+                                @error('newPwd_confirmation')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
