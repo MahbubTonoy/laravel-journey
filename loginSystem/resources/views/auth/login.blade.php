@@ -42,7 +42,7 @@
               </div>
               <div class="form-group form-button">
                 <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" /> 
-                <a href="{{route('password.request')}}" style="text-align: left" class="signup-image-link">Forget Password</a>
+                <a href="{{route('password.request')}}" style="text-align: left " class="signup-image-link">Forget Password</a>
               </div>
             </form>
             <div class="social-login">
